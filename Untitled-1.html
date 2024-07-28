@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hellwaitsyou</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+  <style>
+    /* Reset básico de estilo */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Estilo para o corpo e a área de fundo */
+    body, html {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://w.wallhaven.cc/full/gp/wallhaven-gp62wd.png');
+      background-size: cover;
+      background-position: center;
+      animation: moveBackground 20s linear infinite;
+      z-index: -1; /* Mantenha o fundo atrás de outros elementos */
+    }
+
+    @keyframes moveBackground {
+      0% { background-position: 0 0; }
+      100% { background-position: 100% 100%; }
+    }
+
+    .profile-card {
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 15px;
+      padding: 30px;
+      margin: 20px;
+      text-align: center;
+      color: #fff;
+      width: 300px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Animações suaves */
+    }
+
+    .profile-card:hover {
+      transform: scale(1.05); /* Aumenta a escala da caixa ao passar o mouse */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao passar o mouse */
+      background: rgba(0, 0, 0, 0.8); /* Escurece o fundo ao passar o mouse */
+    }
+
+    /* Estilo para o efeito de brilho (glare) */
+    .js-tilt-glare {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+      border-radius: inherit;
+    }
+
+    .js-tilt-glare-inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      pointer-events: none;
+      background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+      transform: rotate(180deg) translate(-50%, -50%);
+      transform-origin: 0% 0%;
+      opacity: 0.5; /* Ajuste a opacidade para visibilidade do brilho */
+      width: 100%;
+      height: 100%;
+      transition: opacity 0.2s; /* Adiciona transição suave */
+    }
+
+    .profile-card:hover .js-tilt-glare-inner {
+      opacity: 0.6; /* Ajuste a opacidade para o efeito hover */
+    }
+
+    .avatar {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      margin-bottom: 15px;
+    }
+
+    /* Estilo para o cabeçalho h2 */
+    h2 {
+      font-family: 'Roboto', sans-serif; /* Usando a fonte Roboto */
+    }
+
+    /* Estilo para os links de redes sociais */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .icon {
+      margin: 0 10px;
+    }
+
+    .icon img {
+      width: 30px;
+      height: 30px;
+      transition: transform 0.2s;
+    }
+
+    .icon img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="profile-card">
+    <div class="js-tilt-glare">
+      <div class="js-tilt-glare-inner"></div>
+    </div>
+    <img src="https://i.pinimg.com/564x/fc/77/67/fc7767f31ec52ac065cbae859bd8187f.jpg" alt="User Avatar" class="avatar">
+    <h2>mendesxqz</h2>
+    <div class="social-links">
+      <a href="https://discord.com/users/879047571908202526" class="icon" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.icons8.com/?size=512&id=30998&format=png" alt="Discord">
+      </a>
+      <a href="https://www.instagram.com/mendesxqz" class="icon" target="_blank" rel="noopener noreferrer">
+        <img src="https://static.vecteezy.com/system/resources/previews/018/930/415/original/instagram-logo-instagram-icon-transparent-free-png.png" alt="Instagram">
+      </a>
+    </div>
+  </div>
+</body>
+</html>
